@@ -70,8 +70,7 @@ const SelectableTable = () => {
               return (
                 <tr
                   key={user.id}
-                  onClick={() => toggleOne(user.id)}
-                  className={`border-t border-border cursor-pointer transition-colors ${
+                  className={`border-t border-border transition-colors ${
                     isSelected ? "bg-primary/5" : "hover:bg-muted/30"
                   }`}
                 >
@@ -79,7 +78,6 @@ const SelectableTable = () => {
                     <Checkbox
                       checked={isSelected}
                       onChange={() => toggleOne(user.id)}
-                      onClick={(e) => e.stopPropagation()}
                     />
                   </td>
                   <td className="px-4 py-3 font-medium text-foreground">{user.name}</td>
