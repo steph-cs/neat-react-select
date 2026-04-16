@@ -115,7 +115,7 @@ const Index = () => {
           </div>
 
           {/* Checkbox showcase */}
-          <div className="rounded-lg border border-border bg-card p-8 space-y-6">
+          <div className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-8 space-y-6 shadow-glass">
             <div>
               <h3 className="text-lg font-semibold text-card-foreground">Checkbox</h3>
               <p className="text-sm text-muted-foreground mt-1">
@@ -142,7 +142,7 @@ const Index = () => {
           </div>
 
           {/* Modal showcase */}
-          <div className="rounded-lg border border-border bg-card p-8 space-y-6">
+          <div className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-8 space-y-6 shadow-glass">
             <div>
               <h3 className="text-lg font-semibold text-card-foreground">Modal</h3>
               <p className="text-sm text-muted-foreground mt-1">
