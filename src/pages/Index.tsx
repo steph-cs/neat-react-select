@@ -2,6 +2,7 @@ import { useState } from "react";
 import SelectableTable from "@/components/SelectableTable";
 import Checkbox from "@/components/Checkbox";
 import { Modal, ModalHeader, ModalFooter } from "@/components/Modal";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const features = [
   {
@@ -44,14 +45,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <header className="border-b border-border">
+      <header className="border-b border-glass-border backdrop-blur-md bg-glass sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="text-lg font-bold tracking-tight">ReactUI</span>
-          <nav className="hidden sm:flex gap-6 text-sm text-muted-foreground">
-            <a href="#componentes" className="hover:text-foreground transition-colors">Componentes</a>
-            <a href="#features" className="hover:text-foreground transition-colors">Recursos</a>
-            <a href="#demo" className="hover:text-foreground transition-colors">Demo</a>
-          </nav>
+          <div className="flex items-center gap-6">
+            <nav className="hidden sm:flex gap-6 text-sm text-muted-foreground">
+              <a href="#componentes" className="hover:text-foreground transition-colors">Componentes</a>
+              <a href="#features" className="hover:text-foreground transition-colors">Recursos</a>
+              <a href="#demo" className="hover:text-foreground transition-colors">Demo</a>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
@@ -91,7 +95,7 @@ const Index = () => {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="rounded-lg border border-border bg-card p-6 space-y-3 hover:shadow-md transition-shadow"
+                className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-6 space-y-3 hover:shadow-glass transition-all duration-300"
               >
                 <span className="text-2xl">{f.icon}</span>
                 <h3 className="font-semibold text-card-foreground">{f.title}</h3>
@@ -111,7 +115,7 @@ const Index = () => {
           </div>
 
           {/* Checkbox showcase */}
-          <div className="rounded-lg border border-border bg-card p-8 space-y-6">
+          <div className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-8 space-y-6 shadow-glass">
             <div>
               <h3 className="text-lg font-semibold text-card-foreground">Checkbox</h3>
               <p className="text-sm text-muted-foreground mt-1">
@@ -138,7 +142,7 @@ const Index = () => {
           </div>
 
           {/* Modal showcase */}
-          <div className="rounded-lg border border-border bg-card p-8 space-y-6">
+          <div className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-8 space-y-6 shadow-glass">
             <div>
               <h3 className="text-lg font-semibold text-card-foreground">Modal</h3>
               <p className="text-sm text-muted-foreground mt-1">
