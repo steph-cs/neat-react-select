@@ -95,7 +95,7 @@ const Index = () => {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="rounded-lg border border-border bg-card p-6 space-y-3 hover:shadow-md transition-shadow"
+                className="rounded-lg border border-glass-border bg-glass backdrop-blur-md p-6 space-y-3 hover:shadow-glass transition-all duration-300"
               >
                 <span className="text-2xl">{f.icon}</span>
                 <h3 className="font-semibold text-card-foreground">{f.title}</h3>
