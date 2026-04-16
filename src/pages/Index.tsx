@@ -2,6 +2,7 @@ import { useState } from "react";
 import SelectableTable from "@/components/SelectableTable";
 import Checkbox from "@/components/Checkbox";
 import { Modal, ModalHeader, ModalFooter } from "@/components/Modal";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const features = [
   {
