@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SelectableTable from "@/components/SelectableTable";
 import Checkbox from "@/components/Checkbox";
+import { Modal, ModalHeader, ModalFooter } from "@/components/Modal";
 
 const features = [
   {
@@ -38,6 +39,7 @@ const features = [
 const Index = () => {
   const [demoChecked, setDemoChecked] = useState(false);
   const [demoIndet, setDemoIndet] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -133,6 +135,44 @@ const Index = () => {
                 Desabilitado
               </label>
             </div>
+          </div>
+
+          {/* Modal showcase */}
+          <div className="rounded-lg border border-border bg-card p-8 space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold text-card-foreground">Modal</h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Dialog modal acessível com overlay, fechamento por Escape e clique fora. Sem bibliotecas externas.
+              </p>
+            </div>
+            <button
+              onClick={() => setModalOpen(true)}
+              className="inline-flex items-center px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Abrir Modal
+            </button>
+            <Modal open={modalOpen} onClose={() => setModalOpen(false)}>
+              <ModalHeader>
+                <h2 className="text-lg font-semibold text-card-foreground">Título do Modal</h2>
+                <p className="text-sm text-muted-foreground">
+                  Este é um exemplo de modal construído apenas com React e Tailwind CSS. Pressione Escape ou clique fora para fechar.
+                </p>
+              </ModalHeader>
+              <ModalFooter>
+                <button
+                  onClick={() => setModalOpen(false)}
+                  className="px-4 py-2 rounded-md border border-border text-sm font-medium hover:bg-secondary transition-colors"
+                >
+                  Cancelar
+                </button>
+                <button
+                  onClick={() => setModalOpen(false)}
+                  className="px-4 py-2 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                >
+                  Confirmar
+                </button>
+              </ModalFooter>
+            </Modal>
           </div>
         </div>
       </section>
