@@ -39,6 +39,7 @@ const features = [
 const Index = () => {
   const [demoChecked, setDemoChecked] = useState(false);
   const [demoIndet, setDemoIndet] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
