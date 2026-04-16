@@ -45,14 +45,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <header className="border-b border-border">
+      <header className="border-b border-glass-border backdrop-blur-md bg-glass sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span className="text-lg font-bold tracking-tight">ReactUI</span>
-          <nav className="hidden sm:flex gap-6 text-sm text-muted-foreground">
-            <a href="#componentes" className="hover:text-foreground transition-colors">Componentes</a>
-            <a href="#features" className="hover:text-foreground transition-colors">Recursos</a>
-            <a href="#demo" className="hover:text-foreground transition-colors">Demo</a>
-          </nav>
+          <div className="flex items-center gap-6">
+            <nav className="hidden sm:flex gap-6 text-sm text-muted-foreground">
+              <a href="#componentes" className="hover:text-foreground transition-colors">Componentes</a>
+              <a href="#features" className="hover:text-foreground transition-colors">Recursos</a>
+              <a href="#demo" className="hover:text-foreground transition-colors">Demo</a>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
